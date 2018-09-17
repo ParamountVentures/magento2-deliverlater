@@ -11,7 +11,7 @@
             'Magento_Checkout/js/model/shipping-rate-processor/customer-address',
             'Magento_Checkout/js/model/shipping-rate-processor/new-address',
         ], function($, quote, shippingService, rateRegistry, customerAddressProcessor, newAddressProcessor) {
-            $('#target').on('click', function(e) {
+            //$('#target').on('click', function(e) {
                 var address = quote.shippingAddress();
                 console.log(address);
 
@@ -28,7 +28,7 @@
                 } else {
                     newAddressProcessor.getRates(address);
                 }
-            });
+            //});
         });    
 </script>
 <div class="block block-order-details-view">
