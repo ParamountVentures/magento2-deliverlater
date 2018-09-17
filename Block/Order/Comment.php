@@ -34,6 +34,7 @@ class Comment extends \Magento\Framework\View\Element\Template
 
     public function getDeliverLater(): string
     {
+        $order = $this->getOrder();
         $shipping_method = $order->getShippingMethod();
         var_dump($shipping_method);
         exit();
