@@ -29,12 +29,14 @@ class Comment extends \Magento\Framework\View\Element\Template
 
     public function getOrder() : Order
     {
+        echo("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        exit();
         return $this->coreRegistry->registry('current_order');
     }
 
     public function getDeliverLater(): string
     {
-        echo("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        
         //$order = $this->getOrder();
         //$shipping_method = $order->getShippingMethod();
         //var_dump($shipping_method);
