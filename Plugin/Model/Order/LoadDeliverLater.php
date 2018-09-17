@@ -39,6 +39,10 @@ class LoadDeliverLater
 
     public function setDeliverLater(OrderInterface $order)
     {
+        $shipping_method = $order->getShippingMethod();
+        var_dump($shipping_method);
+        exit();
+
         if ($order instanceof \Magento\Sales\Model\Order) {
             $value = $order->getParamountVenturesDeliverLater();
         } else {
