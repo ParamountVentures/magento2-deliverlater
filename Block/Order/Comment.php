@@ -21,9 +21,6 @@ class Comment extends \Magento\Framework\View\Element\Template
         Registry $registry,
         array $data = []
     ) {
-        echo("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-        exit();
-        
         $this->coreRegistry = $registry;
         $this->_isScopePrivate = true;
         $this->_template = 'order/view/comment.phtml';
@@ -31,19 +28,13 @@ class Comment extends \Magento\Framework\View\Element\Template
     }
 
     public function getOrder() : Order
-    {        
+    {
         return $this->coreRegistry->registry('current_order');
     }
 
     public function getDeliverLater(): string
     {
-        
-        //$order = $this->getOrder();
-        //$shipping_method = $order->getShippingMethod();
-        //var_dump($shipping_method);
-        //exit();
-
-        //if ($order->getShippingMethod() != "customshippingrate_deliverlater") return NULL;
+     //   if ($order->getShippingMethod() != "customshippingrate_deliverlater") return NULL;
 
         return trim($this->getOrder()->getData(DeliverLater::COMMENT_FIELD_NAME));
     }
