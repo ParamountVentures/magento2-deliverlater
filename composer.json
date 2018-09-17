@@ -1,0 +1,25 @@
+{
+  "name": "paramountventures/magento2-deliverlater",
+  "description": "Magento 2 Module to add  a deliver later option field above the place order button in the checkout",
+  "version": "1.5.0",
+  "require": {
+    "php": "~7.0.0|~7.1.0"
+  },
+  "type": "magento2-module",
+  "keywords": ["magento2"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ParamountVentures",
+      "email": "steven@livz.org"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "ParamountVentures\\DeliverLater\\": ""
+    }
+  }
+}

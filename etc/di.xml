@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="ParamountVentures\DeliverLater\Api\Data\DeliverLaterInterface" type="ParamountVentures\DeliverLater\Model\Data\DeliverLater" />
+    <preference for="ParamountVentures\DeliverLater\Api\DeliverLaterManagementInterface" type="ParamountVentures\DeliverLater\Model\DeliverLaterManagement" />
+    <preference for="ParamountVentures\DeliverLater\Api\GuestDeliverLaterManagementInterface" type="ParamountVentures\DeliverLater\Model\GuestDeliverLaterManagement" />
+    
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="paramountventures_order_comment" xsi:type="string">sales_order.paramountventures_order_comment</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="paramountventures_load_deliverlater" type="ParamountVentures\DeliverLater\Plugin\Model\Order\LoadDeliverLater"/>
+    </type>
+</config>
