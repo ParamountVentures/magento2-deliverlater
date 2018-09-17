@@ -21,11 +21,11 @@ define(
              */
             validate: function () {
                 var isCustomer = customer.isLoggedIn();
-                var form = $('.payment-method input[name="payment[method]"]:checked').parents('.payment-method').find('form.order-comment-form');
+                var form = $('.payment-method input[name="payment[method]"]:checked').parents('.payment-method').find('form.deliver-later-form');
 
                 // Compatibility for Rubic_CleanCheckout
                 if (!form.length) {
-                    form = $('form.order-comment-form');
+                    form = $('form.deliver-later-form');
                 }
 
                 var comment = form.find('.input-text.order-comment').val();
@@ -38,9 +38,9 @@ define(
 
                 var url;
                 if (isCustomer) {
-                    url = urlBuilder.createUrl('/carts/mine/set-order-comment', {})
+                    url = urlBuilder.createUrl('/carts/mine/set-deliver-later', {})
                 } else {
-                    url = urlBuilder.createUrl('/guest-carts/:cartId/set-order-comment', {cartId: quoteId});
+                    url = urlBuilder.createUrl('/guest-carts/:cartId/set-deliver-later', {cartId: quoteId});
                 }
 
                 var payload = {

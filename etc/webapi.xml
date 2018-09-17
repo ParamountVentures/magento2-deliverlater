@@ -2,7 +2,7 @@
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
 
     <!-- Managing checkout comment -->
-    <route url="/V1/guest-carts/:cartId/set-order-comment" method="PUT">
+    <route url="/V1/guest-carts/:cartId/set-deliver-later" method="PUT">
         <service class="ParamountVentures\DeliverLater\Api\GuestDeliverLaterManagementInterface" method="saveDeliverLater"/>
         <resources>
             <resource ref="anonymous" />
@@ -10,7 +10,7 @@
     </route>
 
     <!-- Managing checkout comment -->
-    <route url="/V1/carts/mine/set-order-comment" method="PUT">
+    <route url="/V1/carts/mine/set-deliver-later" method="PUT">
         <service class="ParamountVentures\DeliverLater\Api\DeliverLaterManagementInterface" method="saveDeliverLater"/>
         <resources>
             <resource ref="self" />
