@@ -13,6 +13,11 @@ define(
     }
 );
 
-$( "#banktransfer" ).click(function() {
-    alert( "Handler for banktransfer.click() called." );
-  });
+$( document ).ready(function() {
+    console.log( "ready!" );
+
+    $( "#banktransfer" ).click(function() {
+        alert( "Handler for banktransfer.click() called." );
+      });
+});
+
