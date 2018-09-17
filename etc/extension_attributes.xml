@@ -8,6 +8,6 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
     <extension_attributes for="Magento\Sales\Api\Data\OrderInterface">
-        <attribute code="paramountventures_order_comment" type="string" />
+        <attribute code="paramountventures_deliver_later" type="string" />
     </extension_attributes>
 </config>
