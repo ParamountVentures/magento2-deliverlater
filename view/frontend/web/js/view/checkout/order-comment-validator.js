@@ -20,7 +20,7 @@ define(
         'Magento_Checkout/js/model/quote'
     ],
     function ($, quote) {
-        'use strict';
+        console.log("ok11111111");
         $('#banktransfer').on('click', function(e) {
             console.log("ok");
         });
