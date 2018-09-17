@@ -14,9 +14,9 @@ define(
 );
 
 
-require(["jquery"], function($) {
-    jQuery(document).ready(function(){
-        console.log('xxxxxxxxxxxxxxxxxxxxx');
+//require(["jquery"], function($) {
+//    jQuery(document).ready(function(){
+ //       console.log('xxxxxxxxxxxxxxxxxxxxx');
         //jQuery('body').on('click', '.table-checkout-shipping-method input[type="radio"]', function(){
            // var code = 'your_custom_shipping_method_code';
             // you can check your custom shipping method code using inspect element
@@ -28,5 +28,5 @@ require(["jquery"], function($) {
             //    jQuery('.custom-shipping-method-message').hide();
             //}
         //});
-    });
-});
+ //   });
+//});
