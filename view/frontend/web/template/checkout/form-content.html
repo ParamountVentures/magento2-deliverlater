@@ -1,9 +1,7 @@
 <script>
-        $( document ).ready(function() {
-        alert("ok");
-        console.log( "ready!" );
-        console.log(quote);
-        });       
+define(['domReady!'], function () {
+    console.info('The DOM is ready before I happen');
+});
 </script>
 <form class="form form-discount deliver-later-form">
     <div class="payment-option-inner">
