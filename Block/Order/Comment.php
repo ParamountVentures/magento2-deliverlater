@@ -34,6 +34,8 @@ class Comment extends \Magento\Framework\View\Element\Template
 
     public function getDeliverLater(): string
     {
+        if ($order->getShippingMethod() != "customshippingrate_deliverlater") return NULL;
+
         return trim($this->getOrder()->getData(DeliverLater::COMMENT_FIELD_NAME));
     }
 
