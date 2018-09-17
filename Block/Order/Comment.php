@@ -21,6 +21,9 @@ class Comment extends \Magento\Framework\View\Element\Template
         Registry $registry,
         array $data = []
     ) {
+        echo("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        exit();
+        
         $this->coreRegistry = $registry;
         $this->_isScopePrivate = true;
         $this->_template = 'order/view/comment.phtml';
@@ -28,9 +31,7 @@ class Comment extends \Magento\Framework\View\Element\Template
     }
 
     public function getOrder() : Order
-    {
-        echo("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-        exit();
+    {        
         return $this->coreRegistry->registry('current_order');
     }
 
