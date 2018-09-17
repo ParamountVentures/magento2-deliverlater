@@ -13,8 +13,6 @@ class DeliverLater extends AbstractSimpleObject implements DeliverLaterInterface
      */
     public function getComment()
     {
-        echo("sssssssss");
-        exit();
         return $this->_get(static::COMMENT_FIELD_NAME);
     }
 
