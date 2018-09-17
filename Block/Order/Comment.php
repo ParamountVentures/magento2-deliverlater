@@ -32,7 +32,7 @@ class Comment extends \Magento\Framework\View\Element\Template
         return $this->coreRegistry->registry('current_order');
     }
 
-    public function getDeliverLaterX(): string
+    public function getDeliverLaterXxxxxx(): string
     {
         //$order = $this->getOrder();
         //$shipping_method = $order->getShippingMethod();
