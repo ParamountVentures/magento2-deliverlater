@@ -56,7 +56,7 @@ class DeliverLaterManagement implements \ParamountVentures\DeliverLater\Api\Deli
             $quote->setData(DeliverLater::COMMENT_FIELD_NAME, strip_tags($comment));
             $this->quoteRepository->save($quote);
         } catch (\Exception $e) {
-            throw new CouldNotSaveException(__('The order comment could not be saved'));
+            throw new CouldNotSaveException(__('The deliver later could not be saved'));
         }
 
         return $comment;

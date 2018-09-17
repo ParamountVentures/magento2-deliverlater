@@ -66,7 +66,7 @@ class DeliverLaterManagementTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \Magento\Framework\Exception\CouldNotSaveException
-     * @expectedExceptionMessage The order comment could not be saved
+     * @expectedExceptionMessage The deliver later could not be saved
      */
     public function testSaveCommentWhenCouldNotSaveQuote()
     {
@@ -75,7 +75,7 @@ class DeliverLaterManagementTest extends \PHPUnit_Framework_TestCase
 
         $this->setupQuoteRepositoryMockQueries($cartId, $cartItemCount);
         
-        $exceptionMessage = 'The order comment could not be saved';
+        $exceptionMessage = 'The deliver later could not be saved';
         $exception = new \Magento\Framework\Exception\CouldNotSaveException(__($exceptionMessage));
         $this->quoteRepositoryMock->expects($this->once())
             ->method('save')

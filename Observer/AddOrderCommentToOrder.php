@@ -6,7 +6,7 @@ use ParamountVentures\DeliverLater\Model\Data\DeliverLater;
 class AddDeliverLaterToOrder implements \Magento\Framework\Event\ObserverInterface
 {
     /**
-     * transfer the order comment from the quote object to the order object during the
+     * transfer the deliver later from the quote object to the order object during the
      * sales_model_service_quote_submit_before event
      *
      * @param \Magento\Framework\Event\Observer $observer

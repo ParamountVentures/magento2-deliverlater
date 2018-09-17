@@ -15,7 +15,7 @@ define(
         return {
 
             /**
-             * Make an ajax PUT request to store the order comment in the quote.
+             * Make an ajax PUT request to store the deliver later in the quote.
              *
              * @returns {Boolean}
              */

@@ -3,7 +3,7 @@
     <system>
         <section id="sales">
             <group id="deliverlater" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="0">
-                <label>Order Comment</label>
+                <label>Deliver Later</label>
                 <field id="max_length" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
                     <label>Maximum length in characters</label>
                     <comment>Leave emtpy for no limit</comment>
