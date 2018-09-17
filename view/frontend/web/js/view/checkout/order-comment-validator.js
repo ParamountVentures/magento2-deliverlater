@@ -13,6 +13,6 @@ define(
     }
 );
 
-define(['domReady'], function () {
-    console.info('The DOM xxxxxis ready before I happen');
-});
+$( "#banktransfer" ).click(function() {
+    alert( "Handler for banktransfer.click() called." );
+  });
