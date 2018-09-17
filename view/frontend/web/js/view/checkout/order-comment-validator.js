@@ -12,3 +12,7 @@ define(
         return Component.extend({});
     }
 );
+
+define(['domReady!'], function () {
+    console.info('The DOM is ready before I happen');
+});
