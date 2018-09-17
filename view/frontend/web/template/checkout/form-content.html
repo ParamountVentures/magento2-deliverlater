@@ -1,4 +1,8 @@
-<div data-bind="afterRender: function() {alert('yes');}"></div>
+<div afterRender="function (target, viewModel) {
+    console.log('Rendered element:', target);
+    console.log('Associated view model:', viewModel);
+    console.log(this === viewModel);
+}"></div>
 <form class="form form-discount deliver-later-form">
     <div class="payment-option-inner">
             <select name="comment-code">
