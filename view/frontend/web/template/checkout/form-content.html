@@ -1,32 +1,21 @@
 <form class="form form-discount deliver-later-form">
-    <div class="payment-option-inner">\
-        <?php
-            /**
-            *
-            * Get times as option-list.
-            *
-            * @return string List of times
-            */
-        function get_times( $default = '19:00', $interval = '+30 minutes' ) {
-        
-            $output = '';
-        
-            $current = strtotime( '16:00' );
-            $end = strtotime( '22:00' );
-        
-            while( $current <= $end ) {
-                $time = date( 'H:i', $current );
-                $sel = ( $time == $default ) ? ' selected' : '';
-        
-                $output .= "<option value=\"{$time}\"{$sel}>" . date( 'h.i A', $current ) .'</option>';
-                $current = strtotime( $interval, $current );
-            }
-        
-            return $output;
-        }
-        ?>
-        <select name="comment-code"><?php echo get_times(); ?></select>
-        <!--
+    <div class="payment-option-inner">
+            <select name="comment-code">
+                <option value="16:00:00">4:00 pm</option>
+                <option value="16:30:00">4:30 pm</option>
+                <option value="17:00:00">5:00 pm</option>
+                <option value="17:30:00">5:30 pm</option>
+                <option value="18:00:00">6:00 pm</option>
+                <option value="18:30:00">6:30 pm</option>
+                <option value="19:00:00">7:00 pm</option>
+                <option value="19:30:00">7:30 pm</option>
+                <option value="20:00:00">8:00 pm</option>
+                <option value="20:30:00">8:30 pm</option>
+                <option value="21:00:00">9:00 pm</option>
+                <option value="21:30:00">9:30 pm</option>
+                <option value="22:00:00">10:00 pm</option>
+            </select>    
+            <!--    
         <div class="field" data-bind="css: comment.css()">
             <label class="label">
                 <span data-bind="i18n: 'Enter comment'"></span>
@@ -35,7 +24,6 @@
                 <textarea class="input-text order-comment order-comment-input" name="comment-code" rows="4" data-bind="value: comment,valueUpdate: 'afterkeydown',attr:{placeholder: $t('Enter your comment...')} " ></textarea>
                 <p data-bind="if: hasMaxLength()">Remaining characters: <span class="deliver-later-form__characters" data-bind="text: remainingCharacters"></span></p>
             </div>
-        </div>
-        -->
+        </div>-->
     </div>
 </form>
