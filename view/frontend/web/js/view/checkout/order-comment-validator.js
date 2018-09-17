@@ -13,6 +13,6 @@ define(
     }
 );
 
-define(['domReady!'], function () {
+
     console.info('The DOM is ready before I happen');
-});
+
