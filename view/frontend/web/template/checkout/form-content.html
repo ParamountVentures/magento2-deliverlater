@@ -1,13 +1,13 @@
 <form class="form form-discount deliver-later-form" style="display:none">
-    <div afterRender="function () {
+    <div afterRender="function (target, viewModel) {
         if(window.checkoutConfig selectedShippingMethod=='deliverlater') {
-            if (jQuery('.payment-option.comment') == null) {
-                setTimeOut(1000, function(){
-                    jQuery('.payment-option.comment').show();    
-                })
-            } else {
-                jQuery('.payment-option.comment').show();
-            }
+           // if (jQuery('.payment-option.comment') == null) {
+           //     setTimeOut(1000, function(){
+           //         jQuery('.payment-option.comment').show();    
+           //     })
+           // } else {
+           //     jQuery('.payment-option.comment').show();
+           // }
         }
     }"></div>
             
