@@ -10,6 +10,16 @@
                     jQuery('.deliver-later-form').show();
                     jQuery('.deliver-later-form').show();
             }
+        } else {
+            if (jQuery('.payment-option.comment') == null) {
+                    setTimeOut(1000, function(){
+                        jQuery('.payment-option.comment').hide();
+                        jQuery('.payment-option.comment').hide();
+                   })
+                } else {
+                    jQuery('.deliver-later-form').hide();
+                    jQuery('.deliver-later-form').hide();
+            }
         }        
     }"></div>
     <div class="payment-option-inner">
