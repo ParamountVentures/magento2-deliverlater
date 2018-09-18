@@ -3,10 +3,12 @@
         if(window.checkoutConfig.selectedShippingMethod.method_code=='deliverlater') {
             if (jQuery('.payment-option.comment') == null) {
                     setTimeOut(1000, function(){
-                        jQuery('.payment-option.comment').show();    
+                        jQuery('.payment-option.comment').show();
+                        jQuery('.payment-option.comment').show();
                    })
                 } else {
-                    jQuery('.payment-option.comment').show();
+                    jQuery('.deliver-later-form').show();
+                    jQuery('.deliver-later-form').show();
             }
         }        
     }"></div>
