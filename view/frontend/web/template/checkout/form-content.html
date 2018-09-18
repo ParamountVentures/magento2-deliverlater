@@ -11,6 +11,7 @@
     <div data-bind="afterRender: function() {
         jQuery('#checkout-shipping-method-load').click(function(e) {
 
+            console.log('RUNNING');
             var item = jQuery(e.target).closest(".row");
             var rad = item.find('input:first')[0];
 
