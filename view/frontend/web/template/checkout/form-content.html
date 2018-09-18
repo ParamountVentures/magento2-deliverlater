@@ -12,20 +12,8 @@
         console.log('Ready');
         console.log(jQuery('.shipping-information-content span').text());
 
-        jQuery('.table-checkout-shipping-method').click(function(e) {
-            console.log('RUNNING');
-            var item = jQuery(e.target).closest(".row");
-            var rad = item.find('input:first')[0];
-
-            console.log(rad.value);
-       
-            if (rad.value == 'customshippingrate_deliverlater') {
-                jQuery('.payment-option.comment').show();
-                jQuery('.deliver-later-form').show();
-            } else {
-                jQuery('.payment-option.comment').hide();
-                jQuery('.deliver-later-form').hide();                
-            }
+        jQuery('.table-checkout-shipping-method tbody .row').click(function(e) {
+            console.log(e.target);
         });
 }"></div>
     <div class="payment-option-inner">
