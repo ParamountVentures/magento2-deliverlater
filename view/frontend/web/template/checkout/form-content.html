@@ -10,10 +10,7 @@
     }"></div>
     <div data-bind="afterRender: function() {
         console.log('Ready');
-
-        jQuery(document).click(function(e) {
-            console.log('First');
-        };
+        
         document.onclick = function() {
             console.log('Second');
         };
