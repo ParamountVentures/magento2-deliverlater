@@ -30,8 +30,6 @@ define(
 
                 var comment = form.find('.delivery-time').val();
 
-                console.log('comment=' + comment);
-
                 var quoteId = quote.getQuoteId();
 
                 var url;
@@ -47,8 +45,6 @@ define(
                         comment: comment
                     }
                 };
-
-                console.log('payload=' + JSON.stringify(payload));
 
                 if (!payload.deliverLater.comment) {
                     return true;
@@ -74,8 +70,6 @@ define(
                     }
                 );
 
-                console.log('result=' + result);
-                return false;
                 return result;
             },
             hasMaxLength: function() {
