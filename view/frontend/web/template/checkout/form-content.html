@@ -1,8 +1,6 @@
 <form class="form form-discount deliver-later-form" style="display:none">
     <div data-bind="afterRender: function() { 
-        if(window.checkoutConfig.selectedShippingMethod=='deliverlater') {
-            console.log('readyxxxx');
-        }
+        console.log(window.checkoutConfig.selectedShippingMethod);        
     }"></div>
     <div class="payment-option-inner">
             <select name="comment-code">
