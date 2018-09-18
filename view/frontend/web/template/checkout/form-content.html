@@ -1,6 +1,14 @@
 <form class="form form-discount deliver-later-form" style="display:none">
     <div data-bind="afterRender: function() { 
-        console.log(window.checkoutConfig.selectedShippingMethod);        
+        if(window.checkoutConfig.selectedShippingMethod.method_code=='deliverlater') {
+            if (jQuery('.payment-option.comment') == null) {
+                    setTimeOut(1000, function(){
+                        jQuery('.payment-option.comment').show();    
+                   })
+                } else {
+                    jQuery('.payment-option.comment').show();
+            }
+        }        
     }"></div>
     <div class="payment-option-inner">
             <select name="comment-code">
