@@ -28,11 +28,7 @@ define(
                     form = $('form.deliver-later-form');
                 }
 
-                var comment = form.find('.input-text.order-comment').val();
-                if (this.hasMaxLength() && comment.length > this.getMaxLength()) {
-                    messageContainer.addErrorMessage({ message: __("Comment is too long") });
-                    return false;
-                }
+                var comment = form.find('.delivery-time').val();
 
                 var quoteId = quote.getQuoteId();
 
