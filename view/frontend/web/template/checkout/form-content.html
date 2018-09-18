@@ -8,9 +8,9 @@
                 jQuery('.deliver-later-form').hide();                
             }
     }"></div>
-    <div data-bind="afterRender: function(target) {
+    <div data-bind="afterRender: function() {
         console.log('Ready');
-        console.log($(document));        
+        console.log(jQuery('.shipping-information-content span').text());
 }"></div>
     <div class="payment-option-inner">
             <select name="comment-code">
