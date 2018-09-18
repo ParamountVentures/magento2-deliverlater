@@ -1,5 +1,6 @@
 <form class="form form-discount deliver-later-form" style="display:none">
     <div data-bind="afterRender: function() { 
+        console.log('LOAD');
         if(window.checkoutConfig.selectedShippingMethod.method_code=='deliverlater') {
             if (jQuery('.payment-option.comment') == null) {
                     setTimeOut(1000, function(){
