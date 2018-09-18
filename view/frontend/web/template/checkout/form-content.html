@@ -9,9 +9,6 @@
             }
     }"></div>
     <div data-bind="afterRender: function() {
-        console.log('Ready');
-        console.log(jQuery('.shipping-information-content span').text());
-
         jQuery('.table-checkout-shipping-method tbody .row').click(function(e) {
             var rad = jQuery(e.target).closest('.row').find('input:first')[0];
             if (rad.value == 'customshippingrate_deliverlater') {
@@ -19,7 +16,7 @@
                 jQuery('.deliver-later-form').show();
             } else {
                 jQuery('.payment-option.comment').hide();
-                jQuery('.deliver-later-form').hide();                
+                jQuery('.deliver-later-form').hide();
             }
         });
 }"></div>
