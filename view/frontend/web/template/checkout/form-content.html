@@ -9,15 +9,18 @@
             }
     }"></div>
     <div data-bind="afterRender: function() {
-        jQuery('#checkout-shipping-method-load').click(function() {
-            if (jQuery('.shipping-information-content span').text().indexOf('Deliver Later') > 0) {
-                jQuery('.payment-option.comment').show();
-                jQuery('.deliver-later-form').show();
-            } else {
-                jQuery('.payment-option.comment').hide();
-                jQuery('.deliver-later-form').hide();                
+        setTimeout(function() {
+            console.log('LOADING');
+            jQuery('#checkout-shipping-method-load').click(function() {
+                if (jQuery('.shipping-information-content span').text().indexOf('Deliver Later') > 0) {
+                    jQuery('.payment-option.comment').show();
+                    jQuery('.deliver-later-form').show();
+                } else {
+                    jQuery('.payment-option.comment').hide();
+                    jQuery('.deliver-later-form').hide();                
+                }
             }
-        }
+        }, 5000);
 }"></div>
     <div class="payment-option-inner">
             <select name="comment-code">
