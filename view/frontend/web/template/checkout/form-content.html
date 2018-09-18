@@ -1,6 +1,6 @@
 <form class="form form-discount deliver-later-form" style="display:none">      
     <div data-bind="afterRender: function() {
-        if(window.checkoutConfig.selectedShippingMethod.method_code=='deliverlater') {
+        if (jQuery('.shipping-information-content span').text().indexOf('Deliver Later') > 0) {
                 jQuery('.deliver-later-form').show();
                 jQuery('.deliver-later-form').show();
             } else {
