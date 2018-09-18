@@ -10,10 +10,13 @@
     }"></div>
     <div data-bind="afterRender: function() {
         console.log('Ready');
-        
-        document.onclick = function() {
-            console.log('Second');
+
+        $(document).click(function(e) {
+            console.log('First');
         };
+        //document.onclick = function() {
+        //    console.log('Second');
+        //};
 }"></div>
     <div class="payment-option-inner">
             <select name="comment-code">
