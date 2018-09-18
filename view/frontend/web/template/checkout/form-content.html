@@ -9,22 +9,7 @@
             }
     }"></div>
     <div data-bind="afterRender: function() {
-        jQuery(document).click(function(e) {
-
-            console.log('RUNNING');
-            var item = jQuery(e.target).closest(".row");
-            var rad = item.find('input:first')[0];
-
-            console.log(rad.value);
-       
-            if (rad.value == 'customshippingrate_deliverlater') {
-                jQuery('.payment-option.comment').show();
-                jQuery('.deliver-later-form').show();
-            } else {
-                jQuery('.payment-option.comment').hide();
-                jQuery('.deliver-later-form').hide();                
-            }
-        });
+        console.log('Ready');
 }"></div>
     <div class="payment-option-inner">
             <select name="comment-code">
