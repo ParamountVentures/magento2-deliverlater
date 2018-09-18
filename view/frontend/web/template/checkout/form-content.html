@@ -9,10 +9,8 @@
             }
     }"></div>
     <div data-bind="afterRender: function() {
-        console.log('LOADING');
-        jQuery('#checkout-shipping-method-load').click(function() {
-            console.log('CLICKED');
-            if (jQuery('.shipping-information-content span').text().indexOf('Deliver Later') > 0) {
+        jQuery('#checkout-shipping-method-load').click(function(e) {
+            if (e.srcElement.value == 'customshippingrate_deliverlater') {
                 jQuery('.payment-option.comment').show();
                 jQuery('.deliver-later-form').show();
             } else {
