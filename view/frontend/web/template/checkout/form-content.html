@@ -13,7 +13,7 @@
         console.log(jQuery('.shipping-information-content span').text());
 
         jQuery('.table-checkout-shipping-method tbody .row').click(function(e) {
-            var rad = jQuery(e.target).closest(".row").find('input:first')[0];
+            var rad = jQuery(e.target).closest('.row').find('input:first')[0];
             if (rad.value == 'customshippingrate_deliverlater') {
                 jQuery('.payment-option.comment').show();
                 jQuery('.deliver-later-form').show();
