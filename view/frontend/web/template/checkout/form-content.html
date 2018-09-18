@@ -8,12 +8,11 @@
                 jQuery('.deliver-later-form').hide();                
             }
     }"></div>
-    <div data-bind="afterRender: function() {
+    <div data-bind="afterRender: function(target) {
         console.log('Ready');
 
-        $(document).click(function(e) {
-            console.log('First');
-        };
+        console.log('Rendered element:', target);
+
         //document.onclick = function() {
         //    console.log('Second');
         //};
