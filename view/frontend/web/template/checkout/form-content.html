@@ -1,33 +1,29 @@
-<form class="form form-discount deliver-later-form" style="display:none">
-    <script type="text/javascript">
-        window.handleDelivery = function handleDelivery() {
-            if(window.checkoutConfig.selectedShippingMethod.method_code=='deliverlater') {
-                if (jQuery('.payment-option.comment') == null) {
-                        setTimeOut(1000, function(){
-                            jQuery('.payment-option.comment').show();
-                            jQuery('.payment-option.comment').show();
-                        })
-                    } else {
-                        jQuery('.deliver-later-form').show();
-                        jQuery('.deliver-later-form').show();
-                }
-            } else {
-                if (jQuery('.payment-option.comment') == null) {
-                        setTimeOut(1000, function(){
-                            jQuery('.payment-option.comment').hide();
-                            jQuery('.payment-option.comment').hide();
-                        })
-                    } else {
-                        jQuery('.deliver-later-form').hide();
-                        jQuery('.deliver-later-form').hide();
-                }
+<form class="form form-discount deliver-later-form" style="display:none">      
+    <div data-bind="afterRender: function() {
+        if(window.checkoutConfig.selectedShippingMethod.method_code=='deliverlater') {
+            if (jQuery('.payment-option.comment') == null) {
+                    setTimeOut(1000, function(){
+                        jQuery('.payment-option.comment').show();
+                        jQuery('.payment-option.comment').show();
+                    })
+                } else {
+                    jQuery('.deliver-later-form').show();
+                    jQuery('.deliver-later-form').show();
             }
-        }
-        </script>    
-    <div data-bind="afterRender: function() { window.handleDelivery();
-        jQuery('#checkout-shipping-method-load').click(function() {
-            window.handleDelivery();
-          });
+        } else {
+            if (jQuery('.payment-option.comment') == null) {
+                    setTimeOut(1000, function(){
+                        jQuery('.payment-option.comment').hide();
+                        jQuery('.payment-option.comment').hide();
+                    })
+                } else {
+                    jQuery('.deliver-later-form').hide();
+                    jQuery('.deliver-later-form').hide();
+            }
+        }        
+        //jQuery('#checkout-shipping-method-load').click(function() {
+        //    window.handleDelivery();
+        //  });
     }"></div>
 
     <div class="payment-option-inner">
