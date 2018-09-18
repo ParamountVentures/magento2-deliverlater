@@ -1,9 +1,11 @@
 <form class="form form-discount deliver-later-form" style="display:none">
-    <div data-bind="afterRender: function() {
-        jQuery('.table-checkout-shipping-method.row').click(function() {
-            alert( "Handler for .click() called." );
+    <div data-bind="afterRender: function() { handleDelivery();
+        jQuery('#checkout-shipping-method-load').click(function() {
+            handleDelivery();
           });
-
+    }"></div>
+    <script type="text/javascript">
+    function handleDelivery() {
         if(window.checkoutConfig.selectedShippingMethod.method_code=='deliverlater') {
             if (jQuery('.payment-option.comment') == null) {
                     setTimeOut(1000, function(){
@@ -24,8 +26,9 @@
                     jQuery('.deliver-later-form').hide();
                     jQuery('.deliver-later-form').hide();
             }
-        }        
-    }"></div>
+        }
+    }
+    </script>
     <div class="payment-option-inner">
             <select name="comment-code">
                 <option value="16:00:00">4:00 pm</option>
