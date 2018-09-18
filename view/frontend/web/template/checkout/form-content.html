@@ -1,13 +1,23 @@
 <form class="form form-discount deliver-later-form" style="display:none">      
     <div data-bind="afterRender: function() {
-        if (jQuery('.shipping-information-content span').text().indexOf('Deliver Later') > 0) {
+            if (jQuery('.shipping-information-content span').text().indexOf('Deliver Later') > 0) {
                 jQuery('.deliver-later-form').show();
                 jQuery('.deliver-later-form').show();
             } else {
                 jQuery('.deliver-later-form').hide();
                 jQuery('.deliver-later-form').hide();                
             }
-        }"></div>
+
+            jQuery('#checkout-shipping-method-load').click(function() {
+                if (jQuery('.shipping-information-content span').text().indexOf('Deliver Later') > 0) {
+                    jQuery('.deliver-later-form').show();
+                    jQuery('.deliver-later-form').show();
+                } else {
+                    jQuery('.deliver-later-form').hide();
+                    jQuery('.deliver-later-form').hide();                
+                }
+            }
+    }"></div>
 
     <div class="payment-option-inner">
             <select name="comment-code">
