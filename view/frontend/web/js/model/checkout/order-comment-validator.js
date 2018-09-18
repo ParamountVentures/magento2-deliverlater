@@ -48,7 +48,7 @@ define(
                     }
                 };
 
-                console.log('payload=' + payload);
+                console.log('payload=' + JSON.stringify(payload));
 
                 if (!payload.deliverLater.comment) {
                     return true;
