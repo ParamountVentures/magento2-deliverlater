@@ -10,7 +10,11 @@
     }"></div>
     <div data-bind="afterRender: function() {
         jQuery('#checkout-shipping-method-load').click(function(e) {
-            if (e.srcElement.value == 'customshippingrate_deliverlater') {
+
+            var item = jQuery(e.target).closest(".row");
+            var rad = item.find('input:first')[0];
+       
+            if (rad.value == 'customshippingrate_deliverlater') {
                 jQuery('.payment-option.comment').show();
                 jQuery('.deliver-later-form').show();
             } else {
