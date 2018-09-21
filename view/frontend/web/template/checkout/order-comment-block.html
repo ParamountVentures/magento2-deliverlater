@@ -1,15 +1,4 @@
-<!-- ko if: getInitialCollapseState() == 2 -->
-<div class="payment-option opc-payment-additional comment last">
-    <div class="payment-option-title field choice">
-        <span data-bind="i18n: 'When would you like your pizza delivered?'"></span>
-    </div>
-    <div class="payment-option-content">
-        <!-- ko template: 'ParamountVentures_DeliverLater/checkout/form-content' --><!-- /ko -->
-    </div>
-</div>
-<!-- /ko -->
 
-<!-- ko if: getInitialCollapseState() != 2 -->
 <div class="payment-option _collapsible opc-payment-additional comment last"
      data-bind="mageInit: {'collapsible':{'openedState': '_active', 'active': isInitialStateOpened()}}">
 
@@ -22,4 +11,3 @@
         <!-- ko template: 'ParamountVentures_DeliverLater/checkout/form-content' --><!-- /ko -->
     </div>
 </div>
-<!-- /ko -->
