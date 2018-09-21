@@ -1,10 +1,10 @@
 <form class="form form-discount deliver-later-form" style="display:none">      
     <div data-bind="afterRender: function() {
             if (jQuery('.shipping-information-content span').text().indexOf('Deliver Later') > 0) {
-                jQuery('.payment-option.comment').show();
+                jQuery('.payment-option-comment').show();
                 jQuery('.deliver-later-form').show();
             } else {
-                jQuery('.payment-option.comment').hide();
+                jQuery('.payment-option-comment').hide();
                 jQuery('.deliver-later-form').hide();                
             }
     }"></div>
@@ -12,10 +12,10 @@
         jQuery('.table-checkout-shipping-method tbody .row').click(function(e) {
             var rad = jQuery(e.target).closest('.row').find('input:first')[0];
             if (rad.value == 'customshippingrate_deliverlater') {
-                jQuery('.payment-option.comment').show();
+                jQuery('.payment-option-comment').show();
                 jQuery('.deliver-later-form').show();
             } else {
-                jQuery('.payment-option.comment').hide();
+                jQuery('.payment-option-comment').hide();
                 jQuery('.deliver-later-form').hide();
             }
         });
